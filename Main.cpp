@@ -51,4 +51,18 @@ int main() {
 	al_install_keyboard();
 
 	timer = al_create_timer(1.0 / FPS);
+
+	display = al_create_display(500, 500);
+
+	player1 = al_create_bitmap(player1_SIZE, player1_SIZE);
+
+	al_set_target_bitmap(player1);
+
+	al_clear_to_color(al_map_rgb(255, 0, 255));
+
+	al_set_target_bitmap(al_get_backbuffer(display));
+
+	event_queue = al_create_event_queue();
+
+
 }
